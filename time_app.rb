@@ -11,7 +11,7 @@ class TimeApp
     if @request.path != "/time"
       Rack::Response.new(['error'], 404, { 'Content-Type' => 'text/plain' })
     else
-      print FORMATS
+      @request.params
       Rack::Response.new(['time'], 200, { 'Content-Type' => 'text/plain' })
     end
   end
