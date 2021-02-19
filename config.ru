@@ -1,2 +1,2 @@
-require_relative 'time_app'
-run TimeApp.new
+require_relative 'app'
+run App.new
