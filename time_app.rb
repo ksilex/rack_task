@@ -1,6 +1,7 @@
-FORMATS = { 'year' => '%Y', 'month' => '%m', 'day' => '%d', 'hour' => '%H',
-            'minute' => '%M', 'second' => '%S' }.freeze
 class TimeApp
+  FORMATS = { 'year' => '%Y', 'month' => '%m', 'day' => '%d', 'hour' => '%H',
+              'minute' => '%M', 'second' => '%S' }.freeze
+
   def call(env)
     @request = Rack::Request.new(env)
     response_conditions
