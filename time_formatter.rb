@@ -9,11 +9,11 @@ class TimeFormatter
   end
 
   def input_valid?
-    (user_input - FORMATS.keys).empty?
+    unknown_formats.empty?
   end
 
   def unknown_formats
-    user_input - FORMATS.keys
+    @unknown_formats = user_input - FORMATS.keys
   end
 
   def time_output
